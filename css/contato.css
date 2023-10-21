@@ -36,7 +36,7 @@ body {
     .menuproduto {
         width: 386px;
         flex-direction: column;
-        height: 700px;
+        height: 500px;
         padding-left: 10px;
     }
 }
@@ -62,6 +62,7 @@ body {
 @media (max-width: 414px) {
     .textomenu {
         max-width: 400px;
+        height: 220px;
     }
 }
 
@@ -71,13 +72,20 @@ body {
 
 @media (max-width: 414px) {
     .textomenu h1 {
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 
 .textomenu p {
     padding: 24px 0 24px;
     font-size: 20px;
+}
+
+@media (max-width: 414px) {
+    .textomenu p {
+        padding: 32px 0 32px;
+        font-size: 16px;
+    }
 }
 
 .textomenu a {
@@ -97,8 +105,8 @@ body {
 
 @media (max-width: 414px) {
     .imagemmenu {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -157,6 +165,7 @@ body {
 .mapa iframe {
     width: 100%;
     height: 400px;
+    border-radius: 10px;
 }
 
 .logo-form {

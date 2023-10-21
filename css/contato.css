@@ -62,7 +62,7 @@ body {
 @media (max-width: 414px) {
     .textomenu {
         max-width: 400px;
-        height: 220px;
+        height: 250px;
     }
 }
 
@@ -270,7 +270,7 @@ body {
 
 @media (max-width: 414px) {
     .formulario button {        
-        margin-left: 155px;
+        margin-left: 170px;
     }
 }
 

@@ -41,18 +41,6 @@ body {
     }
 }
 
-@media (max-width: 393px) {
-    .menuproduto {
-        width: 365px;
-    }
-}
-
-@media (max-width: 375px) {
-    .menuproduto {
-        width: 320px;
-    }
-}
-
 .textomenu {
     width: 100%;
     max-width: 700px;
@@ -137,19 +125,6 @@ body {
     }
 }
 
-@media (max-width: 393px) {
-    .mapa {
-        width: 365px;
-    }
-}
-
-@media (max-width: 375px) {
-    .mapa {
-        width: 319px;
-    }
-}
-
-
 .mapa h2 {
     padding-bottom: 20px;
 }
@@ -159,17 +134,16 @@ body {
     height: 400px;
 }
 
-.logo-form {
-    display: flex;
+.logo-form figure img {
     width: 160px;
     height: 40px;
-    margin: 0 auto;
     margin-bottom: 70px;
 }
 
-.logo-form img {
-    min-width: 160px;
-    min-height: 40px;
+@media (max-width: 608px) {
+    .logo-form figure img {
+        margin-left: 105px;
+    }
 }
 
 .section-form {
@@ -188,24 +162,12 @@ body {
     }
 }
 
-@media (max-width: 688px) {
-    .section-form {
-        width: 660px;
-        gap: 48px;
-    }
-}
-
 @media (max-width: 414px) {
     .section-form {        
         width: 386px;
         flex-direction: column-reverse;
         justify-content: center;
-    }
-}
-
-@media (max-width: 393px) {
-    .section-form {
-        width: 365px;
+        gap: 48px;
     }
 }
 
@@ -219,20 +181,7 @@ body {
 
 @media (max-width: 414px) {
     .form-group input, textarea {        
-        width: 285px;
         margin-left: 2px;
-    }
-}
-
-@media (max-width: 414px) {
-    .form-group input, textarea {        
-        width: 252px;
-    }
-}
-
-@media (max-width: 375px) {
-    .form-group input, textarea {        
-        width: 210px;
     }
 }
 
@@ -259,12 +208,6 @@ body {
 
 @media (max-width: 414px) {
     .formulario button {        
-        margin-left: 155px;
-    }
-}
-
-@media (max-width: 375px) {
-    .formulario button {        
-        margin-left: 135px;
+        margin-left: 170px;
     }
 }

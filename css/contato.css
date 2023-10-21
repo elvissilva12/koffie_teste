@@ -15,13 +15,24 @@ body {
     height: 400px;
     padding-left: 23px;
     margin: 0 auto;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media (max-width: 608px) {
+@media (max-width: 768px) {
+    .menuproduto {
+        width: 740px;
+    }
+}
+
+@media (max-width: 688px) {
+    .menuproduto {
+        width: 660px;
+    }
+}
+
+@media (max-width: 414px) {
     .menuproduto {
         flex-direction: column;
         height: 700px;
@@ -34,21 +45,26 @@ body {
     height: 300px;
 }
 
+@media (max-width: 414px) {
+    .textomenu {
+        max-width: 400px;
+    }
+}
+
 .textomenu h1 {
     font-size: 46px;
+}
+
+@media (max-width: 414px) {
+    .textomenu h1 {
+        font-size: 36px;
+    }
 }
 
 .textomenu p {
     padding: 24px 0 24px;
     font-size: 20px;
 }
-
-@media (max-width: 608px) {
-    .textomenu p {        
-        font-size: 30px;
-    }
-}
-
 
 .textomenu a {
     padding: 8px 40px;
@@ -82,6 +98,18 @@ body {
     
 }
 
+@media (max-width: 768px) {
+    .mapa {
+        width: 740px;
+    }
+}
+
+@media (max-width: 688px) {
+    .mapa {
+        width: 660px;
+    }
+}
+
 .mapa h2 {
     padding-bottom: 20px;
 }
@@ -110,6 +138,20 @@ body {
     padding: 30px 23px;
     margin: 0 auto;
     gap: 220px;
+}
+
+@media (max-width: 768px) {
+    .section-form {
+        width: 740px;
+        gap: 126px;
+    }
+}
+
+@media (max-width: 688px) {
+    .section-form {
+        width: 660px;
+        gap: 48px;
+    }
 }
 
 @media (max-width: 608px) {

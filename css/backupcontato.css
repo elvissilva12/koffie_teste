@@ -97,6 +97,12 @@ body {
     margin-bottom: 70px;
 }
 
+@media (max-width: 608px) {
+    .logo-form figure img {
+        margin-left: 105px;
+    }
+}
+
 .section-form {
     width: 830px;
     display: flex;
@@ -108,9 +114,9 @@ body {
 
 @media (max-width: 608px) {
     .section-form {        
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
-        gap: 0;
+        gap: 50px;
     }
 }
 
@@ -136,7 +142,7 @@ body {
 
 .formulario button {
     margin-top: 6px;
-    margin-left: 215px;
+    margin-left: 210px;
     padding: 8px 40px;
     color: white;
     background-color: #2A130A;

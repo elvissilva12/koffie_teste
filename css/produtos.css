@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Plus Jakarta Sans;
+}
+ 
+body {
+  background: #e4d7ce;
+}
+
+.section-titulo {
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.section-titulo h1 {
+    font-size: 36px;
+    
+}
+
+@media (max-width: 768px) {
+    .section-titulo {
+        width: 480px;
+    }
+}
+
+@media (max-width: 414px) {
+    .section-titulo {
+        width: 320px;
+    }
+}
+
+@media (max-width: 414px) {
+    .section-titulo h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 414px) {
+    .section-titulo h2 {
+        font-size: 20px;
+    }
+}
+
+.cafes {
+    display: flex;
+    width: 990px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .cafes {
+        width: 600px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 414px) {
+    .cafes {
+        width: 330px;
+    }
+}
+
+.produto {
+    background-color: rgb(172, 150, 117);
+    width: 260px;
+    height: 300px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 2px 0 2px;
+    border-radius: 20px;
+}
+
+@media (max-width: 414px) {
+    .produto {
+        width: 160px;
+        height: 280px;
+        margin: 0 0 10px 0
+    }
+}
+
+@media (max-width: 414px) {
+    .produto img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 414px) {
+    .produto h2 {
+        font-size: 22px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 414px) {
+    .produto p {
+        font-size: 14px;
+    }
+}
+
+.description {
+    height: 70px;
+}
+
+.btn-subtrair, .quantidade, .btn-adicionar {
+    margin-top: 30px;
+}
+
+@media (max-width: 414px) {
+    .btn-subtrair, .quantidade, .btn-adicionar {
+        margin-top: 1px;
+    }
+}
+
+.btn-subtrair, .btn-adicionar {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #2A130A;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 414px) {
+    .btn-subtrair, .btn-adicionar {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.quantidade {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+
+@media (max-width: 414px) {
+    .quantidade {
+        width: 35px;
+        height: 25px;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.cafes a {
+    margin-top: 25px;
+    padding: 8px 40px;
+    color: white;
+    background-color: #2A130A;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .cafes a {
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}

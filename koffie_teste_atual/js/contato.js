@@ -5,13 +5,11 @@ let nomeInput = document.getElementById("nome");
 let nomeHelper = document.getElementById("nome-helper");
 
 
-/* Função para mostrar ou ocultar popup de campo obrigatório, vazio e alterar o 
-   label e input para vermelho caso o campo esteja vazio.
-*/
+// Função para mostrar ou ocultar popup de campo obrigatório ou vazio.
 
 function mostrarPopUp(label, inputOrTextarea) {
 
-    //Mostrar popup de campo obrigatório no input ou textarea.
+    // Mostrar popup de campo obrigatório no input ou textarea.
     inputOrTextarea.addEventListener("focus", function(){
         label.classList.add("required-popup");
         });
@@ -66,9 +64,14 @@ emailInput.addEventListener("change", function(evento) {
 
     // Vericando se o email segue o seguinte padrão:
     // exemplo@exemplo.com 
+    // exemplo123@exemplo.com
     // exemplo@exemplo.com.br
+    // exemplo123@exemplo.com.br
 
-    if (/^[a-zA-Z]+[a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.(com|com\.br)$/.test(emailValor)) {
+    /* Obs: o email será valido também se houver . ou _ por exemplo 
+    exemplo.teste@hotmail.com ou exemplo_teste@hotmail.com */
+
+    if (/^[a-zA-Z0-9][a-zA-Z0-9._-]*[a-zA-Z0-9]@[a-zA-Z-]+(?:\.[a-zA-Z-]+)*\.(com|com\.br)$/.test(emailValor)) {
 
         // Estilos caso o email siga os padrões citados acima.
         emailInput.classList.remove('error');
@@ -86,6 +89,29 @@ emailInput.addEventListener("change", function(evento) {
 
 let mensagemLabel = document.querySelector('label[for="mensagem"]');
 let mensagemTextArea = document.getElementById("mensagem");
-let mensagemHelper = document.getElementById("mensagem");
+let mensagemHelper = document.getElementById("mensagem-helper");
 
 mostrarPopUp(mensagemLabel, mensagemTextArea);
+
+
+mensagemTextArea.addEventListener('input', function() {
+    if (mensagemTextArea.value.length > 10) {
+        // Estilos caso o texto exceda 10 caracteres.
+        mensagemTextArea.classList.add('error');
+        mensagemHelper.classList.add('visible');
+        mensagemHelper.innerText = '(O campo só pode conter 10 caracteres.)';
+        mensagemLabel.style.color = "#992020";
+    } else {
+        // Estilos caso o texto contenha 10 caracteres ou menos.
+        mensagemTextArea.classList.remove('error');
+        mensagemHelper.classList.remove('visible');
+        mensagemLabel.style.color ="#2a130a";
+    }
+});
+
+
+
+
+
+
+

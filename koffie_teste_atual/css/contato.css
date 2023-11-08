@@ -130,7 +130,7 @@
     justify-content: center;
 }
 
-.formulario label {
+.label-form {
     position: relative;
     color: #2a130a;
     font-size: 16px;
@@ -209,7 +209,7 @@
     box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, .35);
 }
 
-/* Estilos do form */
+/* Estilos dinâmicos do form */
 
 .helper-text {
     display: none;
@@ -245,18 +245,12 @@
     background-color: #2a130a;
 }
 
-    .error {
+.error {
     border: solid 2px #992020;
     background-color: #CCBBBB;
     color: #662020;
 }
-  
-  input.correct {
-    background-color: #BBCCBB;
-    border: solid 2px #206620;
-    color: #206620;
-  }
-  
+ 
   .visible {
-    display: block;
+    display:inline;
   }

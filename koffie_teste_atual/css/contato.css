@@ -2,6 +2,7 @@
 
 .menuproduto .container {
     width: 100%;
+    max-width: 1200px;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -110,6 +111,7 @@
 
 .contato-localizacao .container {
     display: flex;
+    max-width: 1200px;
 }
 
 .section-form {
@@ -153,6 +155,7 @@
     outline: none;
     border: 1px solid rgb(var(--wix-ui-tpa-text-field-main-border-color-rgb, var(--wix-color-5)),
             calc(var(--wix-ui-tpa-text-field-main-border-color-opacity, 1) * var(--wix-ui-tpa-text-field-main-border-opacity, 0.6)));
+    border-radius: 5px;
 }
 
 .btn-container {

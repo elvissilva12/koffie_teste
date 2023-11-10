@@ -21,7 +21,7 @@ function mostrarPopUp(label, inputOrTextarea) {
     // Mostrar popup de campo vazio.
     if (inputOrTextarea.value.trim() == '') {
         label.classList.add("campo-vazio");
-        
+                
     // Ocultar popup de campo vazio.
     } else {
         label.classList.remove("campo-vazio");
@@ -44,6 +44,7 @@ nomeInput.addEventListener("change", function(evento) {
         nomeLabel.style.color = "#992020";
 
     } else {
+
         // Estilos caso não contenha algum número ou caractere especial.
         nomeInput.classList.remove('error');
         nomeHelper.classList.remove('visible');
@@ -64,22 +65,28 @@ emailInput.addEventListener("change", function(evento) {
 
     // Vericando se o email segue o seguinte padrão:
     // exemplo@exemplo.com 
-    // exemplo123@exemplo.com
+    // exemplo_123@exemplo.com
     // exemplo@exemplo.com.br
     // exemplo123@exemplo.com.br
 
     /* Obs: o email será valido também se houver . ou _ por exemplo 
     exemplo.teste@hotmail.com ou exemplo_teste@hotmail.com */
 
-    if (/^[a-zA-Z0-9][a-zA-Z0-9._-]*[a-zA-Z0-9]@[a-zA-Z-]+(?:\.[a-zA-Z-]+)*\.(com|com\.br)$/.test(emailValor)) {
+    if (/^(?=[a-zA-Z0-9]*[a-zA-Z])[a-zA-Z0-9][a-zA-Z0-9._-]*[a-zA-Z0-9]@[a-zA-Z-]+(?:\.[a-zA-Z-]+)*\.(com|com\.br)$/.test(emailValor)) {
 
         // Estilos caso o email siga os padrões citados acima.
         emailInput.classList.remove('error');
         emailHelper.classList.remove('visible');
         emailLabel.style.color ="#2a130a";
-        
+
+        // Estilos caso o campo esteja vazio.  
+    } else if (emailValor.trim() == '') {
+        emailInput.classList.remove('error');
+        emailHelper.classList.remove('visible');
+        emailLabel.style.color ="#2a130a";
+
     } else {
-        // Estilos caso não siga o padrão.
+        // Estilos caso o campo esteja incorreto não seguindo a validação da expressão regular.
         emailInput.classList.add('error');
         emailHelper.classList.add('visible');
         emailHelper.innerText = '(Insira um email válido.)';
@@ -108,10 +115,3 @@ mensagemTextArea.addEventListener('input', function() {
         mensagemLabel.style.color ="#2a130a";
     }
 });
-
-
-
-
-
-
-

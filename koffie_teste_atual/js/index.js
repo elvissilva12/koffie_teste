@@ -45,11 +45,11 @@ function digitar() {
     document.getElementById("paragrafo3").innerHTML += textoP3.charAt(contadorP3);
     contadorP3++;
     setTimeout(digitar, 45);
+
   }
 }
 
 digitar();
 
-// Definindo um tempo de 18 segundos para redirecionar para página home.
 setTimeout(function() {
     window.location.href = 'home.html';}, 18000);
